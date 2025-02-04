@@ -50,8 +50,8 @@ const Section2 = () => {
           </h1>
         </div>
         <hr className="w-80 mx-auto h-[1px] my-8 bg-gray-100  rounded-sm md:my-10 dark:bg-gray-700" />
-        <div className="grid grid-cols-2 gap-4 justify-center gap-y-12 sm:gap-y-24">
-          <div className="flex gap-4 items-start">
+        <div className="grid grid-cols-2 grid-rows-2 place-items-center gap-4 justify-center gap-y-12 sm:gap-y-24 ">
+          <div className="flex gap-4 items-start max-w-2xl ">
             <Bot
               strokeWidth={3}
               size={64}
@@ -59,7 +59,7 @@ const Section2 = () => {
             />
             <div className="flex flex-col gap-4">
               <h3 className="text-2xl font-semibold">AI in Diagnosis</h3>
-              <p className="text-base  line-clamp-6 ">
+              <p className="text-base  xl:text-4xl  line-clamp-6 ">
                 Leveraging AI for early and accurate diagnosis, improving
                 patient outcomes through advanced imaging and predictive
                 analytics.
@@ -67,17 +67,17 @@ const Section2 = () => {
             </div>
           </div>
 
-          <div className="flex gap-4 items-start">
+          <div className="flex gap-4 max-w-2xl items-start">
             <Power
               strokeWidth={3}
               size={64}
               className="sm:w-44 w-96 -mt-3 sm:-mt-4"
             />
             <div className="flex flex-col gap-4">
-              <h3 className="text-2xl min-h-16 font-semibold line-clamp-2">
+              <h3 className="text-2xl  font-semibold line-clamp-2">
                 AI-Enabled CMS
               </h3>
-              <p className="text-base  line-clamp-6">
+              <p className="text-base  xl:text-4xl line-clamp-6">
                 Streamline healthcare operations with AI-powered Content
                 Management Systems for efficient record-keeping and data
                 insights.
@@ -85,7 +85,7 @@ const Section2 = () => {
             </div>
           </div>
 
-          <div className="flex gap-4 items-start">
+          <div className="flex gap-4 max-w-2xl items-start">
             <GraduationCap
               strokeWidth={3}
               size={64}
@@ -95,14 +95,14 @@ const Section2 = () => {
               <h3 className="text-2xl font-semibold line-clamp-2">
                 Cross-Training Solutions
               </h3>
-              <p className="text-base  line-clamp-6">
+              <p className="text-base xl:text-4xl line-clamp-6">
                 Equip healthcare professionals with AI-driven tools and training
                 for adapting to evolving technologies and practices.
               </p>
             </div>
           </div>
 
-          <div className="flex gap-4 items-start">
+          <div className="flex gap-4 max-w-2xl items-start">
             <Brain
               size={64}
               strokeWidth={3}
@@ -112,7 +112,7 @@ const Section2 = () => {
               <h3 className="text-2xl font-semibold line-clamp-2">
                 Health care Tech
               </h3>
-              <p className="text-base  line-clamp-6">
+              <p className="text-base xl:text-4xl line-clamp-6">
                 Integrating cutting-edge healthcare technologies for smarter and
                 more efficient patient care delivery systems.
               </p>

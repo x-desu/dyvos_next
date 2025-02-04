@@ -11,7 +11,7 @@ const Section = () => {
 
   const { scrollYProgress } = useScroll({
     target: componentRef,
-    offset: ["start end", "end center"],
+    offset: ["start end", "center center"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-100, 0], { clamp: false });
