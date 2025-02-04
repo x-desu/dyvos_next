@@ -3,6 +3,8 @@ import { Montserrat, Lora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import SmoothScroll from "@/app/components/SmoothScroll";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
