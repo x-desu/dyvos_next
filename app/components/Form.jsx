@@ -47,7 +47,7 @@ const ContactForm = () => {
         },
       });
     } catch (err) {
-      toast("Error", {
+      toast("Error sending form", {
         icon: "",
         style: {
           borderRadius: "10px",
