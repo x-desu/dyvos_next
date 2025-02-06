@@ -35,31 +35,31 @@ const Section2 = () => {
             WHAT WE DO
           </h3>
           <h1 className="text-center tracking-wider leading-snug text-2xl sm:text-4xl font-medium whitespace-pre-wrap ">
-            <span className="">
-              {`We’ve`} got everything you need to launch and grow your
-            </span>
-            <Typewriter
-              text={[" business", " enterprise", " apps/web"]}
-              speed={150}
-              className=""
-              initialDelay={10}
-              waitTime={1500}
-              deleteSpeed={150}
-              cursorChar={"_"}
-            />
+            <div className="sm:min-h-20">
+              <span className="">
+                {`We’ve`} got everything you need to launch and grow your
+              </span>
+              <Typewriter
+                text={[" business", " enterprise", " apps/web"]}
+                speed={150}
+                className=""
+                initialDelay={10}
+                waitTime={1500}
+                deleteSpeed={150}
+                cursorChar={"_"}
+              />
+            </div>
           </h1>
         </div>
         <hr className="w-80 mx-auto h-[1px] my-8 bg-gray-100  rounded-sm md:my-10 dark:bg-gray-700" />
         <div className="grid grid-cols-2 grid-rows-2 place-items-center gap-4 justify-center gap-y-12 sm:gap-y-24 ">
-          <div className="flex gap-4 items-start max-w-2xl ">
-            <Bot
-              strokeWidth={3}
-              size={64}
-              className="sm:w-44 w-96 -mt-3 sm:-mt-4"
-            />
+          <div className="flex gap-4 items-start max-w-44 sm:max-w-2xl ">
+            <Bot strokeWidth={3} size={64} className="w-44 -mt-3 sm:-mt-4" />
             <div className="flex flex-col gap-4">
-              <h3 className="text-2xl font-semibold">AI in Diagnosis</h3>
-              <p className="text-base  xl:text-4xl  line-clamp-6 ">
+              <h3 className="sm:text-4xl text-xl font-semibold">
+                AI in Diagnosis
+              </h3>
+              <p className="text-sm  xl:text-2xl  line-clamp-6 min-h-36">
                 Leveraging AI for early and accurate diagnosis, improving
                 patient outcomes through advanced imaging and predictive
                 analytics.
@@ -67,17 +67,13 @@ const Section2 = () => {
             </div>
           </div>
 
-          <div className="flex gap-4 max-w-2xl items-start">
-            <Power
-              strokeWidth={3}
-              size={64}
-              className="sm:w-44 w-96 -mt-3 sm:-mt-4"
-            />
+          <div className="flex gap-4 max-w-44 sm:max-w-2xl  items-start">
+            <Power strokeWidth={3} size={64} className="w-44  -mt-3 sm:-mt-4" />
             <div className="flex flex-col gap-4">
-              <h3 className="text-2xl  font-semibold line-clamp-2">
+              <h3 className="sm:text-4xl text-xl  font-semibold line-clamp-2">
                 AI-Enabled CMS
               </h3>
-              <p className="text-base  xl:text-4xl line-clamp-6">
+              <p className="text-sm  xl:text-2xl line-clamp-6 min-h-36">
                 Streamline healthcare operations with AI-powered Content
                 Management Systems for efficient record-keeping and data
                 insights.
@@ -85,34 +81,30 @@ const Section2 = () => {
             </div>
           </div>
 
-          <div className="flex gap-4 max-w-2xl items-start">
+          <div className="flex gap-4 max-w-44 sm:max-w-2xl  items-start ">
             <GraduationCap
               strokeWidth={3}
               size={64}
-              className="sm:w-44 w-96 -mt-3 sm:-mt-4"
+              className="w-44  -mt-3 sm:-mt-4"
             />
             <div className="flex flex-col gap-4">
-              <h3 className="text-2xl font-semibold line-clamp-2">
+              <h3 className="sm:text-4xl text-xl font-semibold line-clamp-2">
                 Cross-Training Solutions
               </h3>
-              <p className="text-base xl:text-4xl line-clamp-6">
-                Equip healthcare professionals with AI-driven tools and training
+              <p className="text-sm xl:text-2xl line-clamp-6 min-h-36">
+                Equip healthcare profesionals with AI-driven tools and training
                 for adapting to evolving technologies and practices.
               </p>
             </div>
           </div>
 
-          <div className="flex gap-4 max-w-2xl items-start">
-            <Brain
-              size={64}
-              strokeWidth={3}
-              className="sm:w-44 w-96 -mt-3 sm:-mt-4"
-            />
+          <div className="flex gap-4 max-w-44 sm:max-w-2xl  items-start ">
+            <Brain size={64} strokeWidth={3} className="w-44 -mt-3 sm:-mt-4" />
             <div className="flex flex-col gap-4">
-              <h3 className="text-2xl font-semibold line-clamp-2">
+              <h3 className="sm:text-4xl text-xl font-semibold line-clamp-2">
                 Health care Tech
               </h3>
-              <p className="text-base xl:text-4xl line-clamp-6">
+              <p className="text-sm xl:text-2xl line-clamp-6 min-h-36">
                 Integrating cutting-edge healthcare technologies for smarter and
                 more efficient patient care delivery systems.
               </p>

@@ -3,7 +3,7 @@ import Form from "@/app/components/Form";
 
 const Section6 = () => {
   return (
-    <div id="target-project" className="h-full  p-8 sm:p-16">
+    <div id="target-project" className="h-full   px-8 sm:p-16">
       <div className="flex items-center justify-center w-full sm:py-0">
         <Form />
       </div>
