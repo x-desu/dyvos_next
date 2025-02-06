@@ -3,16 +3,7 @@
 import Image from "next/image";
 import AnimatedGradient from "@/components/fancy/AnimationGradient";
 const Footer = () => {
-  const colors = [
-    "#061f2c",
-    "#10333b",
-    "#093966",
-    "#000000",
-    "#61accf",
-    "#4e85b3",
-    "#454f58",
-    "#2f5294",
-  ];
+  const colors = ["#061f2c", "#10333b", "#093966", "#000000"];
   return (
     <>
       <footer className="footer  bg-base-200 text-base-content p-10 hidden sm:footer">
