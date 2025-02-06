@@ -6,24 +6,27 @@ import { submitForm } from "@/utils/actions";
 import { useFormStatus } from "react-dom";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+
 export function FormButton() {
   const { pending } = useFormStatus();
 
   return (
-    <button
-      type="submit"
-      disabled={pending}
-      className="hover:scale-105 duration-300 active:scale-95"
-    >
-      <GradientText
-        colors={["#40f2ff", "#bfd2ff", "#206e9b", "#2867fa", "#002077"]}
-        animationSpeed={12}
-        showBorder={true}
-        className="custom-class w-full px-4 py-2"
+    <div className="flex justify-center">
+      <button
+        type="submit"
+        disabled={pending}
+        className="hover:scale-105 duration-300 active:scale-95 "
       >
-        {pending ? "Submitting..." : "Submit"}
-      </GradientText>
-    </button>
+        <GradientText
+          colors={["#40f2ff", "#bfd2ff", "#206e9b", "#2867fa", "#002077"]}
+          animationSpeed={12}
+          showBorder={true}
+          className="custom-class w-full px-4 py-2"
+        >
+          {pending ? "Submitting..." : "Submit"}
+        </GradientText>
+      </button>
+    </div>
   );
 }
 

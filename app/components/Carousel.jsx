@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -30,6 +30,11 @@ const Carousel = () => {
   const prevSlide = () =>
     setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
+  useEffect(() => {
+    setInterval(() => {
+      setIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+  }, []);
   return (
     <div className="flex flex-col items-center justify-center h-full w-full max-w-4xl mx-auto p-4 sm:p-6  rounded-lg  relative">
       {/* Left Arrow */}

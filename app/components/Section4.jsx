@@ -13,7 +13,7 @@ const logoImgs = [
 ];
 const Section4 = () => {
   return (
-    <div className="h-screen mt-16 py-16 px-12 sm:px-24 bg-black " id="clients">
+    <div className="h-screen  py-16 px-12 sm:px-24  " id="clients">
       <div className=" flex flex-col items-center justify-center">
         <h3 className="mb-4 text-base tracking-widest text-sky-500 font-semibold">
           Dyvos
@@ -38,7 +38,7 @@ const Section4 = () => {
         <Carousel />
       </div>
       <div className="absolute right-1/2 translate-x-1/2">
-        <hr className="w-[2px] h-[72px] mx-auto  mt-4 bg-sky-500 border-0 rounded-sm  dark:bg-sky-700" />
+        <hr className="w-[2px] h-[72px] mx-auto  my-4 bg-sky-500 border-0 rounded-sm  dark:bg-sky-700" />
         <GradientText
           colors={["#40f2ff", "#3370ff", "#40b9ff", "#2867fa", "#40ff90"]}
           animationSpeed={10}
