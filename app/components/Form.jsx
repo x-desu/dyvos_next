@@ -2,7 +2,7 @@
 import GradientText from "@/app/ui/GradientText";
 import Form from "next/form";
 import RotatingText from "@/app/ui/RotatingText";
-import { submitForm } from "@/utils/actions";
+import { submitForm } from "@/app/actions";
 import { useFormStatus } from "react-dom";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";

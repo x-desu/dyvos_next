@@ -10,8 +10,8 @@ export async function POST(req: NextRequest) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: `Dyvos <onboarding@resend.dev>`,
-      to: ["amitesh5q2@gmail.com"],
+      from: "Dyvos <info@dyvostech.com>",
+      to: ["info@dyvostech.com"],
       replyTo: email,
       subject: subject,
       react: SupportEmail({ name, email, message, subject }),

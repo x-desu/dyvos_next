@@ -1,13 +1,13 @@
-"use server";
+"use client";
 
 export async function submitForm(formData) {
   const name = formData.get("name");
   const email = formData.get("email");
   const subject = formData.get("subject");
   const message = formData.get("message");
-  console.log(subject);
+  console.log(name, email, subject, message);
   try {
-    const res = await fetch("http://localhost:3000/api/send", {
+    const res = await fetch("/api/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, subject, message }),
@@ -18,6 +18,7 @@ export async function submitForm(formData) {
 
     return `Thank you, ${name}! Your email (${email}) was submitted.`;
   } catch (error) {
+    console.log(error.message);
     throw new Error(error.message || "Error");
   }
 }

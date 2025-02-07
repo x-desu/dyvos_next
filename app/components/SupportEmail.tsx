@@ -52,17 +52,17 @@ export const SupportEmail = ({
           <Section>
             <Row className="mb-4">
               <Column>
-                <Heading className="text-3xl text-center font-bold w-full text-gray-800 mb-4">
+                <Heading className="text-xl text-center font-bold flex justify-center w-full text-gray-800 mb-4">
                   New Support Request
                 </Heading>
 
-                <Text className="text-lg text-gray-700 mb-2">
+                <Text className="text-2xl flex w-full justify-center text-gray-700 mb-2">
                   <strong>Subject:</strong> {subject}
                 </Text>
-                <Text className="text-lg text-gray-700 mb-2">
+                <Text className="text-xl text-gray-700 mb-2">
                   <strong>Name:</strong> {name}
                 </Text>
-                <Text className="text-lg text-gray-700 mb-4">
+                <Text className="text-xl text-gray-700 mb-4">
                   <strong>Email:</strong> {email}
                 </Text>
 
@@ -79,9 +79,9 @@ export const SupportEmail = ({
           </Section>
 
           {/* Footer */}
-          <Section className="mt-8 border-t pt-6 text-center w-full">
+          <Section className="mt-8 border-t pt-6 flex justify-center text-center w-full">
             <Text className="text-sm text-gray-600">
-              © {new Date().getFullYear()} Your Company. All rights reserved.
+              © {new Date().getFullYear()} Dyvos. All rights reserved.
             </Text>
           </Section>
         </Container>
