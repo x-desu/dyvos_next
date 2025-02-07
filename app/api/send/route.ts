@@ -6,12 +6,11 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   const { name, email, subject, message } = await req.json();
-  console.log(name, subject, email, message);
 
   try {
     const { data, error } = await resend.emails.send({
       from: "Dyvos <info@dyvostech.com>",
-      to: ["info@dyvostech.com"],
+      to: ["info@dyvostech.com", ""],
       replyTo: email,
       subject: subject,
       react: SupportEmail({ name, email, message, subject }),
