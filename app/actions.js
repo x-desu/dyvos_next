@@ -5,7 +5,6 @@ export async function submitForm(formData) {
   const email = formData.get("email");
   const subject = formData.get("subject");
   const message = formData.get("message");
-  console.log(name, email, subject, message);
   try {
     const res = await fetch("/api/send", {
       method: "POST",
@@ -14,11 +13,8 @@ export async function submitForm(formData) {
     });
 
     if (!res.ok) throw new Error("API request failed");
-    console.log("Received:", { name, email, subject, message });
-
     return `Thank you, ${name}! Your email (${email}) was submitted.`;
   } catch (error) {
-    console.log(error.message);
     throw new Error(error.message || "Error");
   }
 }
