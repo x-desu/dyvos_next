@@ -61,7 +61,7 @@ const ContactForm = () => {
       setError("Failed to submit the form. Please try again.");
     }
   };
-  console.log(error);
+
   return (
     <div className="bg-black/5 text-white py-12 px-4 md:px-6 lg:px-12 w-full  rounded-xl">
       <div className="sm:max-w-5xl mx-auto grid md:grid-cols-2 gap-10 ">
