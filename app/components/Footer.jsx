@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import AnimatedGradient from "@/components/fancy/AnimationGradient";
+import Link from "next/link";
 const Footer = () => {
   const colors = ["#061f2c", "#10333b", "#093966", "#000000"];
   return (
@@ -23,7 +24,9 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About us</a>
+          <Link href={"/about"} className="link link-hover">
+            About us
+          </Link>
           <a className="link link-hover">Contact</a>
           <a className="link link-hover">Jobs</a>
           <a className="link link-hover">Press kit</a>

@@ -80,13 +80,15 @@ const Navbar = () => {
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex items-center justify-between peer ">
         {/* Page content here */}
-        <Image
-          src={"/logo.jpeg"}
-          height={96}
-          width={96}
-          alt="Dyvos"
-          className="-ml-4 logo"
-        />
+        <Link href={"/"}>
+          <Image
+            src={"/logo.jpeg"}
+            height={96}
+            width={96}
+            alt="Dyvos"
+            className="-ml-4 logo"
+          />
+        </Link>
 
         <label
           htmlFor="my-drawer-4"

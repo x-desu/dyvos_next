@@ -19,7 +19,11 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: "Dyvos",
-  description: "Healthcare startup gen Ai",
+  description:
+    "Dyvostech Consulting Private Ltd. - Empowering businesses with AI-driven solutions for healthcare, CMS, reporting, and automation",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
