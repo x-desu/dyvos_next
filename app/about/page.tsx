@@ -10,17 +10,17 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <>
-      <div className="h-screen bg-base-200">
+      <div className=" bg-base-200">
         {/* Parallax Hero Section */}
-        <div className="relative h-96 sm:h-1/3 bg-fixed bg-center bg-cover">
+        <div className="relative h-64 sm:h-1/3 bg-fixed bg-center bg-cover">
           <div className="hidden sm:block">
-            <video
+            {/* <video
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               src="/video.mp4"
               autoPlay
               loop
               muted
-            />
+            /> */}
           </div>
           <div className="block sm:hidden">
             <Image
@@ -51,13 +51,13 @@ const AboutPage = () => {
         {/* Parallax Vision Section */}
         <div className="relative h-80 sm:h-1/3 bg-fixed bg-center bg-cover">
           <div className="hidden sm:block">
-            <video
+            {/* <video
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               src="/video.mp4"
               autoPlay
               loop
               muted
-            />
+            /> */}
           </div>
           <div className="block sm:hidden">
             <Image
