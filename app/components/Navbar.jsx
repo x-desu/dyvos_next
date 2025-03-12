@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter, usePathname } from 'next/navigation';
 
 const sidebarItemVariants = {
   hidden: { opacity: 0, x: 100 },
@@ -48,16 +49,56 @@ const sidebarItemInsideVariants = {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+  const [targetSection, setTargetSection] = useState(null);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      // Scroll to the section with an offset for the navbar height (only for hero section)
-      const offset = sectionId === "hero" ? 384 : 0; // 24rem for hero, 0 for others
-      const position = section.offsetTop - offset; // Subtract the offset
+      const offset = sectionId === "hero" ? 384 : 0;
+      const position = section.offsetTop - offset;
       window.scrollTo({ top: position, behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    // Handle scroll after route change
+    if (targetSection) {
+      const timer = setInterval(() => {
+        const section = document.getElementById(targetSection);
+        if (section) {
+          clearInterval(timer);
+          const offset = targetSection === "hero" ? 384 : 0;
+          const position = section.offsetTop - offset;
+          window.scrollTo({ top: position, behavior: "smooth" });
+          setTargetSection(null);
+        }
+      }, 100);
+
+      // Cleanup interval after 3 seconds if section not found
+      setTimeout(() => clearInterval(timer), 3000);
+      return () => clearInterval(timer);
+    }
+  }, [targetSection, pathname]);
+
+  const handleNavigation = async (item) => {
+    if (item.href) {
+      router.push(item.href);
+    } else {
+      setTargetSection(item.sectionId);
+      if (pathname !== '/') {
+        await router.push('/');
+      } else {
+        scrollToSection(item.sectionId);
+      }
+    }
+    
+    const drawerCheckbox = document.getElementById("my-drawer-4");
+    if (drawerCheckbox) drawerCheckbox.checked = false;
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     const drawerCheckbox = document.getElementById("my-drawer-4");
     const handleChange = () => setIsOpen(drawerCheckbox.checked);
@@ -132,8 +173,8 @@ const Navbar = () => {
             {/* Sidebar Menu Items */}
             <motion.ul className="flex flex-col gap-8">
               {[
-                { name: "Home", sectionId: "hero" }, // Home goes to the hero section
-                { name: "About", href: "/about" }, // About links to another page
+                { name: "Home", sectionId: "hero" },
+                { name: "About", href: "/about" },
                 { name: "Services", sectionId: "target-about" },
                 { name: "Works", sectionId: "works" },
                 { name: "Clients", sectionId: "clients" },
@@ -147,20 +188,12 @@ const Navbar = () => {
                   animate={isOpen ? "visible" : "hidden"}
                   className="font-medium text-lg text-white"
                 >
-                  {item.href ? (
-                    // External link (e.g., About page)
-                    <Link href={item.href} className="p-0">
-                      <span className="p-0">{item.name}</span>
-                    </Link>
-                  ) : (
-                    // Internal scroll to section
-                    <span
-                      onClick={() => scrollToSection(item.sectionId)}
-                      className="cursor-pointer p-0"
-                    >
-                      {item.name}
-                    </span>
-                  )}
+                  <span
+                    onClick={() => handleNavigation(item)}
+                    className="cursor-pointer p-0"
+                  >
+                    {item.name}
+                  </span>
                 </motion.li>
               ))}
             </motion.ul>
