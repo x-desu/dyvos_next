@@ -13,15 +13,6 @@ const TermsAndConditions = () => {
   return (
     <>
       <div className="min-h-screen bg-base-200 py-16 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <Image
-            src={gif}
-            alt="Background Pattern"
-            fill
-            sizes="100vw"
-            className="opacity-10 object-cover"
-          />
-        </div>
         <motion.div
           initial="hidden"
           animate="visible"
